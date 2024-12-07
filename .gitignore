@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+# Kera Naidi
+.DS_Store
+.angular
+.vscode
