@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
+    <PackageReference Include="Scalar.Aspnetcore" Version="1.2.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../KeraNaidi.Business/KeraNaidi.Business.csproj" />
   </ItemGroup>
 
 </Project>
