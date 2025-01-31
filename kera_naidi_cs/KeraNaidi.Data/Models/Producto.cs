@@ -1,11 +1,11 @@
 namespace KeraNaidi.Data.Models;
 
-public class Producto : BaseEntity<int>
+public class Product : BaseEntity<int>
 {
     public string Name {get;set;} = String.Empty;
-    public string Codigo {get;set;} = String.Empty;
-    public  int Precio {get;set;}
-    public string Descripcion {get;set;} = String.Empty;
-    public int Inventario {get;set;} = 0;
+    public string Code {get;set;} = String.Empty;
+    public  int Price {get;set;} = 0;
+    public string Description {get;set;} = String.Empty;
+    public int Quantity {get;set;} = 0;
     
 }

@@ -15,8 +15,11 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddTransient<IHealthService, HealthService>();
 
+// builder.Services.AddDbContext<KeraNaidiContext>(
+//     opt => opt.UseInMemoryDatabase("KeiraNaidi")
+// );
 builder.Services.AddDbContext<KeraNaidiContext>(
-    opt => opt.UseInMemoryDatabase("KeiraNaidi")
+    opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("KeraNaidi"))
 );
 var app = builder.Build();
 PopulateDb(app);
