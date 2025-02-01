@@ -14,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddTransient<IHealthService, HealthService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // builder.Services.AddDbContext<KeraNaidiContext>(
 //     opt => opt.UseInMemoryDatabase("KeiraNaidi")

@@ -22,9 +22,13 @@ where TEntity : BaseEntity<TId>
         await _context.SaveChangesAsync();
     }
 
-
     public async Task<TEntity> FindAsync(TId id)
     {
         return await _dbSet.FindAsync(id);
+    }
+
+    public async Task<IEnumerable<TEntity>> GetAllAsync()
+    {
+        return await _dbSet.ToListAsync();
     }
 }

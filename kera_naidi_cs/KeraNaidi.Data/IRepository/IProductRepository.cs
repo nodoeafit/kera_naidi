@@ -8,4 +8,5 @@ where TEntity : BaseEntity<TId>
 {
     Task AddAsync(TEntity product);
     Task<TEntity> FindAsync(TId id);
+    Task<IEnumerable<TEntity>> GetAllAsync();
 }
