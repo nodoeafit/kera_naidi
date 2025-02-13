@@ -27,5 +27,4 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
-
 }
