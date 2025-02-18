@@ -1,9 +1,11 @@
-﻿using KeraNaidi.Data.Models;
+﻿using KeraNaidi.Data.Entities;
+using KeraNaidi.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace KeraNaidi.Data;
 
-public class KeraNaidiContext : DbContext
+public class KeraNaidiContext : IdentityDbContext<ApplicationUser>
 {
     public KeraNaidiContext(DbContextOptions<KeraNaidiContext> options) : base(options){
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior",true);

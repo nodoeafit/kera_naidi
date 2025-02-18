@@ -1,4 +1,5 @@
 using KeraNaidi.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
@@ -21,6 +22,7 @@ public class ProductController : ControllerBase
 
     [HttpGet]
     [Route("GetAllProducts")]
+    [Authorize]
     public async Task<IActionResult> GetAllProducts()
     {
         var result = await _productService.GetAllProducts();
