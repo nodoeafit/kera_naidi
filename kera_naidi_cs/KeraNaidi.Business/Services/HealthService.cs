@@ -1,9 +1,7 @@
 namespace KeraNaidi.Services;
 
 using System.Collections.Generic;
-using System.Security;
 using KeraNaidi.Data;
-using KeraNaidi.Data.IRepository;
 using KeraNaidi.Data.Models;
 using KeraNaidi.Interfaces;
 
