@@ -22,6 +22,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddTransient<IHealthService, HealthService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<KeraNaidiContext>()
     .AddDefaultTokenProviders();
@@ -74,8 +75,8 @@ async void PopulateDb(WebApplication app)
 {
     using (var scope = app.Services.CreateScope())
     {
-        var healthService = scope.ServiceProvider.GetRequiredService<IHealthService>();
-        await healthService.AddHealthCheck(new KeraNaidi.Data.Models.HealthCheck{
+        var unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
+        await unitOfWork.HealthRepository.AddAsync(new KeraNaidi.Data.Models.HealthCheck{
             Date = DateTime.Now,
             Message = "DB Check is Complete"
         });
