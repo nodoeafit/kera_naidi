@@ -1,0 +1,120 @@
+/* Registro Component Styles */
+
+/* Estilo para el contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7fb;
+    padding: 20px;
+  }
+  
+  /* Estilo para la cuadrícula que contiene los elementos */
+  .container-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    text-align: center;
+  }
+  
+  /* Títulos principales */
+  h1 {
+    font-size: 3rem;
+    color: #2b2b2b;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #6c6c6c;
+    margin-bottom: 20px;
+  }
+  
+  /* Imagen */
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  /* Estilo general de formulario */
+  form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Estilo para cada grupo de campos de formulario */
+  .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  /* Estilos para etiquetas */
+  label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Estilos para los campos de entrada (input y select) */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  select:focus {
+    border-color: #3b82f6;
+    outline: none;
+  }
+  
+  /* Estilo para el botón de registro */
+  input[type="button"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Enlace para iniciar sesión */
+  .form-group a {
+    font-size: 1rem;
+    color: #3b82f6;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .form-group a:hover {
+    text-decoration: underline;
+  }
+  

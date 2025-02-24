@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="container-grid">
+        <h1>PARAMO</h1>
+        <h2>Presenta</h2>
+        <img src="../../../assets/login.png" alt="login">
+    </div>
+    <div class="container-grid">
+        <h1>Bienvenidos</h1>
+        <h2>Registro</h2>
+        <form>
+            <div class="form-group">
+                <label for="text">Nombre de usuario:</label>
+                <input type="text" [formControl]="nombreC" id="text" name="text" placeholder="Pepito Perez" required>
+            </div>
+            <div class="form-group">
+                <select class="form-select mt-3" aria-label="Tipo de Documento">
+                    <option selected>Tipo de Documento</option>
+                    <option value="1">Cedula  de ciudadanía</option>
+                    <option value="3">Pasaporte</option>
+                    <option value="5">Permiso Especial de Permanencia (PEP)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="number">Número de documento:</label>
+                <input type="number" id="number" name="number" placeholder="12345678" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" [formControl]="emailC" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Vuelve a escribir tu correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+          
+
+            
+            <div class="form-group">
+                <label for="password">Escribe tu contraseña:</label>
+                <input type="password" [formControl]="contrasenaC" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Repite tu contraseña:</label>
+                <input type="password" [formControl]="confirmarcontrasenaC" id="password" name="password" required>
+            </div>
+
+            <input type="button" value="Registrate" (click)="resgistrarUsuario()" />
+
+            <div class="form-group">
+                <a routerLink="/login">¿Ya tienes cuenta? Iniciar sesión</a>
+            </div>
+        </form>
+    </div>
+</div>
