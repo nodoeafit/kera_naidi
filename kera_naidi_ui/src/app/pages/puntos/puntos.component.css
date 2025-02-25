@@ -1,0 +1,192 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7faf6; /* Fondo suave */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabecera */
+header {
+    background-color: #6dbf60; /* Verde brillante */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #4a9b4c;
+}
+
+header h1 {
+    font-size: 3.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header .subtitulo {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Secciones principales */
+section {
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Introducción */
+.introduccion p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Cómo funciona */
+.como-funciona h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #4a9b4c;
+    text-align: center;
+}
+
+.como-funciona ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.como-funciona li {
+    font-size: 1.2em;
+    color: #555;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.como-funciona li:before {
+    margin-right: 15px;
+    color: #6dbf60;
+    font-size: 1.5em;
+}
+.iconos{
+    
+}
+
+/* Sistema de puntos */
+.sistema-puntos h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #4a9b4c;
+    text-align: center;
+}
+
+.sistema-puntos p {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+}
+
+
+.img{
+    width: 10px;
+    object-fit: cover;
+}
+   
+
+.button{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+}
+
+.buttonColor{
+    padding: 20px 55px; 
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-bottom: 10px;
+}
+
+.buttonColor2{
+    padding: 20px 45px; 
+    font-size: 16px;
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.texto2{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+    font-size: 12px;
+}
+
+/* Detalle de puntos */
+.detalle-puntos ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.detalle-puntos li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.detalle-puntos li strong {
+    color: #6dbf60;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.detalle-puntos li span {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Motivación */
+.motivacion p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Estilo de pie de página */
+footer {
+    background-color: #6dbf60;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1em;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Diseño para pantallas más grandes */
+@media (min-width: 768px) {
+    section {
+        max-width: 1000px;
+        padding: 40px;
+    }
+    .motivacion p {
+        font-size: 1.5em;
+    }
+}

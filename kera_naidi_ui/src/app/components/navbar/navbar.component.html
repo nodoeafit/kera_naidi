@@ -1,4 +1,4 @@
-<nav class="relative text-white flex items-center justify-between p-4 bg-[url(/assets/ParamoBackground.webp)] bg-cover bg-center bg-no-repeat">
+<nav class="relative text-white flex items-center justify-between p-6 bg-[url(/assets/ParamoBackground.webp)] bg-cover bg-center bg-no-repeat">
 
     <div class="absolute inset-0 bg-black/30"></div>
 
@@ -15,8 +15,11 @@
             <a routerLink="/puntos" routerLinkActive="active">Puntos</a>
             <a routerLink="/mapa" routerLinkActive="active">Mapa</a>
         </div>
-        <div>
-            Loguo inicio
-        </div>
-    </div>
-</nav>
+<div class="space-x-4 flex items-center">
+    <a [routerLink]="['/login']" class="text-white hover:text-blue-400 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H3m0 0l5 5m-5-5l5-5" />
+        </svg>
+        <span>Login</span>
+    </a>
+</div>
