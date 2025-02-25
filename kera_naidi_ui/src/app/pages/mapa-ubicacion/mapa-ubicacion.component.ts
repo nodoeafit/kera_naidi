@@ -8,7 +8,7 @@ import { CommonModule, NgFor, NgIf } from '@angular/common';
   styles: [`
     .map-container {
       width: 100%;
-      height: 90vh;
+      height: 100%;
     }
   `],
   standalone: true,
