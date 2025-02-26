@@ -1,0 +1,92 @@
+
+<style>
+    body {
+      background-color: #f9f9e8;
+      font-family: 'Georgia', serif;
+    }
+  
+    .card {
+      background: white;
+      padding: 20px;
+      width: 50%;
+      margin: auto;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+  
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+    }
+  
+    hr {
+      width: 80%;
+      margin: auto;
+      border: 1px solid #ccc;
+    }
+  
+    .row {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      font-size: 16px;
+    }
+  
+    .codigo {
+      color: orange;
+      font-style: italic;
+    }
+  
+    table {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    th {
+      background-color: #f0f0d8;
+      font-weight: bold;
+    }
+  
+    tr:nth-child(even) {
+      background-color: #f9f9e8;
+    }
+  </style>
+  
+  <div class="card">
+    <div class="title">Baterias</div>
+    <hr>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Codigo</th>
+          <th>Porcentaje</th>
+          <th>Precio</th>
+          <th>Activo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let baterias of baterias">
+          <td>{{ baterias.id }}</td>
+          <td class="codigo">{{ baterias.codigo }}</td>
+          <td>{{ baterias.precio}}</td>
+          <td>{{ baterias.porcentajeDeEnergia  }}</td>
+          <td>{{ baterias.isInUse }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
