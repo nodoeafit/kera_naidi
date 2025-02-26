@@ -23,6 +23,7 @@ builder.Services.AddTransient<IHealthService, HealthService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<ICodigosService, CodigosService>();
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<KeraNaidiContext>()
     .AddDefaultTokenProviders();

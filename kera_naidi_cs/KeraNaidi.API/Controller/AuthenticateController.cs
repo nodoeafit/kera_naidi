@@ -21,14 +21,17 @@ namespace Quetzalcoatl.API.Controllers
         private readonly IUserService _userService;
         private readonly IConfiguration _configuration;
 
+        private readonly ICodigosService _codigosService;
+
         public AuthenticateController(UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager, IConfiguration configuration, 
-            IUserService userService)
+            IUserService userService, ICodigosService codigosService)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
             _userService = userService;
+            _codigosService = codigosService;
         }
 
 

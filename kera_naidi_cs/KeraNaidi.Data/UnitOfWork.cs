@@ -10,6 +10,7 @@ public class UnitOfWork : IUnitOfWork
     private IRepository<int, HealthCheck> _healthRepository;
     private IRepository<int, Product> _productRepository;
     private IRepository<int, Ubicacion> _ubicacionRepository;
+    private IRepository<int, ScratchCode> _scratchcodeRepository;
     private bool _disposed = false;
 
     public UnitOfWork(KeraNaidiContext context)
@@ -39,6 +40,14 @@ public class UnitOfWork : IUnitOfWork
         get{
             _ubicacionRepository ??= new Repository<int, Ubicacion>(_context);
             return _ubicacionRepository;
+        }
+    }
+
+    public IRepository<int, ScratchCode> ScratchCodeRepository
+    {
+        get{
+            _scratchcodeRepository ??= new Repository<int, ScratchCode>(_context);
+            return _scratchcodeRepository;
         }
     }
 

@@ -12,7 +12,9 @@ where TEntity : BaseEntity<TId>
     Task Update(TEntity entity);
     Task Delete(TEntity entity);
     Task Delete(TId id);
-
+    Task <ScratchCode> GetScratchCodeByCode(string codigo);
+    Task <ScratchCode> GetScratchCodeById(int id);
+    Task<ScratchCode> UpdateScratchCode(ScratchCode scratchcode);
     Task<IEnumerable<TEntity>> GetAllAsync(
         Expression<Func<TEntity, bool>> filter = null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,

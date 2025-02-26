@@ -67,9 +67,24 @@ where TEntity : BaseEntity<TId>
         }
     }
 
+    public Task<ScratchCode> GetScratchCodeByCode(string codigo)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<ScratchCode> GetScratchCodeById(int id)
+    {
+        throw new NotImplementedException();
+    }
+
     public virtual async Task Update(TEntity entity)
     {
         _dbSet.Attach(entity);
         _context.Entry(entity).State = EntityState.Modified;
+    }
+
+    public Task<ScratchCode> UpdateScratchCode(ScratchCode scratchcode)
+    {
+        throw new NotImplementedException();
     }
 }

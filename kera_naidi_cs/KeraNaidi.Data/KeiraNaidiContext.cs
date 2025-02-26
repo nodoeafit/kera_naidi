@@ -14,6 +14,7 @@ public class KeraNaidiContext : IdentityDbContext<ApplicationUser>
     public DbSet<HealthCheck> HealthCheck {get;set;}
     public DbSet<Product> Products{get;set;}
     public DbSet<Ubicacion> Ubicacion {get;set;}
+    public DbSet<ScratchCode> ScratchCodes {get;set;}
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,6 +26,7 @@ public class KeraNaidiContext : IdentityDbContext<ApplicationUser>
         modelBuilder.Entity<HealthCheck>().ToTable("HealthCheck").HasKey(x => x.Id);
         modelBuilder.Entity<Product>().ToTable("Product").HasKey(x => x.Id);
         modelBuilder.Entity<Ubicacion>().ToTable("Ubicacion").HasKey(x => x.Id);
+        modelBuilder.Entity<ScratchCode>().ToTable("ScratchCode").HasKey(x => x.Id);
         base.OnModelCreating(modelBuilder);
     }
 }

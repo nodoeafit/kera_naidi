@@ -3,6 +3,7 @@ using System;
 using KeraNaidi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace KeraNaidi.Data.Migrations
 {
     [DbContext(typeof(KeraNaidiContext))]
-    partial class KeraNaidiContextModelSnapshot : ModelSnapshot
+    [Migration("20250220010638_ScratchCode")]
+    partial class ScratchCode
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

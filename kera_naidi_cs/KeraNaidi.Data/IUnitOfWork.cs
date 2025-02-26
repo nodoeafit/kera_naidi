@@ -7,5 +7,6 @@ public interface IUnitOfWork
     IRepository<int, HealthCheck> HealthRepository{get;}
     IRepository<int, Product> ProductRepository{get;}
     IRepository<int, Ubicacion> UbicacionRepository{get;}
+    IRepository<int, ScratchCode> ScratchCodeRepository{get;}
     Task SaveAsync();
 }
