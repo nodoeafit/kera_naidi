@@ -1,11 +1,11 @@
-namespace KeraNaidi.Data.Models;
+using KeraNaidi.Data.Models;
 
-public class Ubicacion : BaseEntity<int>
+namespace KeraNaidi.Data.Entities
 {
-    public required string Nombre { get; set; } = string.Empty;
-    public DateTime FechaRegistro { get; set; } = DateTime.UtcNow;
-    public DateTime HorarioApertura { get; set; }
-    public DateTime HorarioCierre { get; set; }
-    public double Latitud { get; set; }
-    public double Longitud { get; set; }
+    public class Ubicacion : BaseEntity<int>
+    {
+        public string Nombre { get; set; }
+        public double Latitud { get; set; }
+        public double Longitud { get; set; }
+    }
 }

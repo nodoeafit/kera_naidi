@@ -1,0 +1,25 @@
+meta {
+  name: Registro Usuario
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5140/api/authenticate/register
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "userName": "mariana123",
+    "email": "mariana@example.com",
+    "password": "MarianaSegura2024$",
+    "phoneNumber": "3001234567"
+  }
+  
+}

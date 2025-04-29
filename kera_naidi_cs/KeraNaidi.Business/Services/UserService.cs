@@ -76,7 +76,8 @@ namespace Quetzalcoatl.Business.Services
             {
                 Email = registerModel.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = registerModel.UserName
+                UserName = registerModel.UserName,
+                PhoneNumber = registerModel.PhoneNumber
             };
 
             var result = await _userManager.CreateAsync(user, registerModel.Password);
@@ -116,7 +117,8 @@ namespace Quetzalcoatl.Business.Services
             {
                 Email= registerModel.Email,
                 SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = registerModel.UserName
+                UserName = registerModel.UserName,
+                PhoneNumber = registerModel.PhoneNumber
             };
 
             var result = await _userManager.CreateAsync(user, registerModel.Password);
@@ -131,16 +133,18 @@ namespace Quetzalcoatl.Business.Services
         {
             
             await RegisterAdmin(new RegisterModel() {
-                Email = "dracvs@gmail.com",
-                Password = "NissanGTR2020$",
-                UserName = "Dracvs"
+                Email = "keranaidi@gmail.com",
+                Password = "Naidiwomen2024$",
+                UserName = "keranaidi",
+                PhoneNumber = "1234567890"
             });
 
             await RegisterAdmin(new RegisterModel()
             {
                 Email = "lucilapg@yahoo.com",
                 Password = "PowerDrive2022$",
-                UserName = "Lucila"
+                UserName = "Lucila",
+                PhoneNumber = "3456756545"
             });
         }
     }

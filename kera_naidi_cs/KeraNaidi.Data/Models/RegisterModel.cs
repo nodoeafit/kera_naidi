@@ -6,6 +6,10 @@ public class RegisterModel
 {
     [Required(ErrorMessage="User Name is Required")]
     public string UserName {get;set;} = string.Empty;
+
+    [Phone]
+    [Required(ErrorMessage = "Phone number is required")]
+    public string PhoneNumber { get; set; } = string.Empty;
     
     [EmailAddress]
     [Required(ErrorMessage = "Email is required")]

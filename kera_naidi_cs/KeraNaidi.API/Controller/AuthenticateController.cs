@@ -45,10 +45,9 @@ namespace Quetzalcoatl.API.Controllers
             try
             {
                 if(await _userService.RegisterUser(registerModel))
-                {
-                    return Ok("User created successfully");
-                }
-                return Ok(new AuthenticatedResponse{ Status = "Success", Message = "User created successfully"});
+                    return Ok(new AuthenticatedResponse { Status = "Success", Message = "User created successfully" });
+                    return BadRequest(new AuthenticatedResponse { Status = "Failure", Message = "User was not created" });
+
             }
             catch (Exception ex)
             {                

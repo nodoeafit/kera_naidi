@@ -1,15 +1,16 @@
-
-
 using KeraNaidi.Data.Models;
+using KeraNaidi.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace KeraNaidi.Data;
+
 public class UnitOfWork : IUnitOfWork
 {
     private readonly KeraNaidiContext _context;
     private IRepository<int, HealthCheck> _healthRepository;
     private IRepository<int, Product> _productRepository;
     private IRepository<int, Ubicacion> _ubicacionRepository;
+    private IRepository<int, Reto> _retoRepository; // 👉 agregado aquí
     private bool _disposed = false;
 
     public UnitOfWork(KeraNaidiContext context)
@@ -28,17 +29,28 @@ public class UnitOfWork : IUnitOfWork
 
     public IRepository<int, Product> ProductRepository
     {
-        get{
+        get
+        {
             _productRepository ??= new Repository<int, Product>(_context);
             return _productRepository;
         }
     }
-    
+
     public IRepository<int, Ubicacion> UbicacionRepository
     {
-        get{
+        get
+        {
             _ubicacionRepository ??= new Repository<int, Ubicacion>(_context);
             return _ubicacionRepository;
+        }
+    }
+
+    public IRepository<int, Reto> RetoRepository // 👉 propiedad para Reto
+    {
+        get
+        {
+            _retoRepository ??= new Repository<int, Reto>(_context);
+            return _retoRepository;
         }
     }
 
@@ -57,9 +69,9 @@ public class UnitOfWork : IUnitOfWork
     #region IDisposable
     protected virtual void Dispose(bool disposing)
     {
-        if(!_disposed)
+        if (!_disposed)
         {
-            if(disposing)
+            if (disposing)
             {
                 _context.DisposeAsync();
             }
